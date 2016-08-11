@@ -133,7 +133,7 @@ var config = {
       },
       apps: {
         console: { name: 'console', desc: 'the command line console web app' },
-        airbots: { name: 'airbots', desc: 'the airbot service' }
+        airbots: { name: 'bot', desc: 'the graph bot service' }
       },
       bot: {
         appId: bot_app_id,
@@ -141,9 +141,6 @@ var config = {
             handle: bot_iframe_handle,
             secret: bot_iframe_secret
         }
-      },
-      qna: {
-          url: qna_service_url
       }
 };
 
