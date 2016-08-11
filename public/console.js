@@ -28,7 +28,7 @@ $(function () {
         plugins: cliData.apis,
         commands: getLocalCommands(),
         broadcastUrlGenerator: broadcastUrlGenerator,
-        welcomeMessage: '<p>Welcome to the airbot web-cli!</p>' +
+        welcomeMessage: '<p>Welcome to the graph bot web-cli!</p>' +
           'Type <b>help</b> to start exploring the commands currently supported or <b>man</b> to get a list of available manuals for this console. <br />' +
           'Run the <b>bot</b> command to start a bot chat<br/>'
       });
