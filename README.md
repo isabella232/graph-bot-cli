@@ -28,7 +28,9 @@ Copy the file `config/dev.sample.json` to `config/dev.private.json` and edit the
 To enable communicating with your bot:
 
 `BOT_APP_ID`- the Microsoft bot Id
+
 `BOT_IFRAME_HANDLE`- the handle name you provided when registered your bot
+
 `BOT_IFRAME_SECRET`- the iframe secret from the dev portal- click on `get bot embed codes` and get it from the `web chat`
 
 
@@ -38,8 +40,11 @@ Logging
 To enable viewing and querying logs as it appears in the screenshot, you'll need to enable logs by providing the following environment variables:
 
 `LOG_STORAGE_ACCOUNT`- azure storage account name to use for storing logs
+
 `LOG_STORAGE_KEY`- the azure storage account key
+
 `LOG_LEVEL`- one  of the following `log`, `info`, `warn`, `error`
+
 `LOG_ENABLED`: false
 
 
