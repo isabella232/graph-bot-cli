@@ -42,7 +42,7 @@ To enable viewing and querying logs as it appears in the screenshot, you'll need
 
 `LOG_LEVEL`- one  of the following `log`, `info`, `warn`, `error`
 
-`LOG_ENABLED`: false
+`LOG_ENABLED`: `true` or `false`
 
 
 In addition to that, you'll need to use the [azure-logging](https://github.com/amiturgman/azure-logging) node module in your bot code to be able to collect your bot application logs.
