@@ -1,5 +1,5 @@
 
-var api = { console: { autoLoad: true} };
+var api = { console: { autoLoad: false } };
 
 var express = require('express'),
   router = api.router = express.Router(),
