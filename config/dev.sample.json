@@ -1,16 +1,10 @@
 {
-    "GOOGLE_CLIENT_ID": "google client id",
-    "GOOGLE_CLIENT_SECRET": "google client secret",
-    "GOOGLE_CALLBACK_URL": "http://localhost:3000/.auth/login/google/callback",
-    "GOOGLE_ADMIN_ACCOUNT": "your.gmail.account@gmail.com",
-    "STORAGE_ACCOUNT": "storage account name",
-    "STORAGE_KEY": "storage account key",
     "LOG_STORAGE_ACCOUNT": "log storage account name",
     "LOG_STORAGE_KEY": "log storage account key",
     "LOG_LEVEL": "log",
     "LOG_ENABLED": false,
+    
     "BOT_IFRAME_HANDLE": "[REQUIRED] bot iframe handle name",
     "BOT_IFRAME_SECRET": "[REQUIRED] bot iframe secret",
-    "BOT_APP_ID": "[REQUIRED] bot app id",
-    "QNA_SERVICE_URL": "[REQUIRED]  qna service Url"
+    "BOT_APP_ID": "[REQUIRED] bot app id"
 }

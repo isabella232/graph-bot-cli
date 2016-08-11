@@ -1,69 +1,52 @@
 
-Web-based Command Line Interface Console
-========================================
-This is a sample application for using the [web-cli](https://github.com/amiturgman/web-cli) html [Polymer](https://www.polymer-project.org/1.0/) control. 
+Bot Command Line Interface Console
+==================================
 
-The application is a holistic solution for a web based CLI, with the following features implemented:
+This application is based on the [web-cli-sample-app](https://github.com/amiturgman/web-cli), so everything you read there regarding enabling the different features is also relevant here.
+I removed the google authentication and user management features to focus on the bot related scenarios, but you can follow the instructions of how to enable authentication and user management in the [web-cli-sample-app](https://github.com/amiturgman/web-cli) page.
 
-* **Authentication**- using Google authentication
-* **Authorization**- Maintaining a list of authorized users
-* **Logging**- query application logs (the console application logs or any other application using the same [azure-logging](https://github.com/amiturgman/azure-logging) node module.
+![Example for the app](https://github.com/catalystcode/graph-bot-cli/raw/master/images/screenshot.png "Screenshot")
 
-The features are automatically enabled based on the provided configuration, so you can start by running the app as is before onboarding with Google for the authentication, or subscribing with Azure to provide an Azure Storage Account settings for the users and logs features.
-
-Plugins samples
----------------
-The application implements a few plugins to extend the console with more commands.
-The plugins can be found in the [api](api) folder. The app reads this folder and adds the plugins dynamically, so basically, adding a plugin can be done by just adding a file to this folder.
-
-Detailed description of how to extent the console can be found [here](https://github.com/amiturgman/aCLI/blob/master/docs/extend.md). 
-The documentation can also be accessed using the `man` command from within the console. The `man` command itself is implemented as a plugin. 
-
-![Example for the app](https://github.com/amiturgman/web-cli-sample-app/raw/master/images/demo.png "Screenshot")
-
-![Animated Demo](https://github.com/amiturgman/web-cli-sample-app/raw/master/images/web-cli-demo.gif "animated demo")
-
-Deployment
----------
-The application can be cloned and run locally immediately on you machine. 
-
-It can be deployed to Azure using the `Deploy To Azure` below, or on any other cloud hosting platform. 
 
 Running Locally
 ---------------
-
-	git clone https://github.com/amiturgman/web-cli-sample-app.git
-	cd web-cli-sample-app
+	git clone https://github.com/catalystcode/graph-bot-cli.git
+	cd graph-bot-cli
 	npm install
 	cd public
 	bower install
+
+```
+	Now you should set some environment variables as explained below
+```
+
+
+You should define a few environment variables in order for the command line interface to be able to work with you bot:
+
+Copy the file `config/dev.sample.json` to `config/dev.private.json` and edit the following values:
+
+To enable communicating with your bot:
+
+`BOT_APP_ID`- the Microsoft bot Id
+`BOT_IFRAME_HANDLE`- the handle name you provided when registered your bot
+`BOT_IFRAME_SECRET`- the iframe secret from the dev portal- click on `get bot embed codes` and get it from the `web chat`
+
+To enable viewing and querying logs as it appears in the screenshot, you'll need to enable logs by providing the following environment variables:
+
+`LOG_STORAGE_ACCOUNT`- azure storage account name to use for storing logs
+`LOG_STORAGE_KEY`- the azure storage account key
+`LOG_LEVEL`- one  of the following `log`, `info`, `warn`, `error`
+`LOG_ENABLED`: false
+
+
 	npm start
 
-Browse to `http://localhost:3000`
-
-I also created a cool [stickey-notes-like](public/stickey-notes) sample in which you can create as many consoles as you want.
-To try it, browse to `http://localhost:3000/stickey-notes`
-
-To enable the features described above, refer to the [config/index.js](config/index.js) file, and provide the relevant settings based on the features you'de like to enable.
-You can either define these setting as environment variables, or define them in a local file (for development).
-* Copy the `config/dev.sample.json` file and create a new file named `config/dev.private.json`.
-* Fill in the details for the features you'de like to support.
-* You don't have to fill in all settings, but **leave those you're not using blank**.
+	Browse to `http://localhost:3000`
 
 
-Enable Google Authentication
-----------------------------
-1. Browse to [Google Developer Console](https://console.developers.google.com/?pli=1). 
-2. Under `Use Google APIs`, click `Enable and Manage APIs` link.
-3. Select `Google+ API` and click `Enable`.
-4. Open the `Credentials` tab. Click the `Create Credentials` select box and select `OAuth client ID`.
-5. Select `Web Application` option from the menu and fill in the following details:
-  * In the `Authorized JavaScript origins`, add the Url for your website: `http://localhost:3000` in this case.
-  * In the `Authorized redirect URIs`, add the callback Url: `http://localhost:3000/.auth/login/google/callback` in this case.
-  * Click the `Create` button.
-6. You'll get a `client Id` and a `client secret`. Copy these strings to a temporary file. We'll use it in a bit.
-
-** you can also use your web application url instead of `localhost` if you deploy it on the cloud.
+Running in the cloud
+--------------------
+Make sure you added the environment variables to the app host server
 
 
 # License

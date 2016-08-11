@@ -8,7 +8,7 @@
 var nconf = require('nconf');
 var path = require('path');
 
-var env = path.join(__dirname, 'cloud.private.json')
+var env = path.join(__dirname, 'dev.private.json')
 
 var nconfig = nconf.env().file({ file: env });
 
@@ -81,9 +81,6 @@ var bot_iframe_secret = nconfig.get('BOT_IFRAME_SECRET');
 //
 // app Id
 var bot_app_id = nconfig.get('BOT_APP_ID');
-//
-// QnA service url
-var qna_service_url = nconfig.get('QNA_SERVICE_URL');
 
 var config = {
     auth: {
