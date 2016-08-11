@@ -18,9 +18,6 @@ Running Locally
 
 	
 	
-Now you should set some environment variables as explained below
-
-
 You should define a few environment variables in order for the command line interface to be able to work with you bot:
 
 Copy the file `config/dev.sample.json` to `config/dev.private.json` and edit the following values:
