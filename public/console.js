@@ -28,11 +28,11 @@ $(function () {
         plugins: cliData.apis,
         commands: getLocalCommands(),
         broadcastUrlGenerator: broadcastUrlGenerator,
-        welcomeMessage: '<p>Welcome to the graph bot web-cli!</p>' +
+        welcomeMessage: '<p>Welcome to the <b>graph bot web-cli</b>!</p>' +
           'Type <b>help</b> to start exploring the commands currently supported or <b>man</b> to get a list of available manuals for this console. <p />' +
           
-          'Type <b>bot start ---pin</b> to start a web chat<br/>' +
-          'Type <b>bot skype</b> to get a link to add the bot to skype <br/>' +
+          'Type <b>bot start ---pin</b> to start a web chat with the graph bot<br/>' +
+          'Type <b>bot skype</b> to get a link to add the graph bot to skype <br/>' +
           'Type <b>log -a bot</b> to get the latest bot application logs <br/>'
           
       });
