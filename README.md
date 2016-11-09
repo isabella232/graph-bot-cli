@@ -46,7 +46,7 @@ To enable viewing and querying logs as it appears in the screenshot, you'll need
 
 
 In addition to that, you'll need to use the [azure-logging](https://github.com/amiturgman/azure-logging) node module in your bot code to be able to collect your bot application logs.
-Follow the code in the [index.js](index.js) file as a reference to enabling collecting logs from your bot service.
+Follow the code in the [server.js](server.js) file as a reference to enabling collecting logs from your bot service.
 
 Now run:
 
